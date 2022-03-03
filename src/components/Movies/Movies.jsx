@@ -8,7 +8,7 @@ const Movies = ({ searchValue, handleSearch, setSearchValue }) => {
             <Nav />
             <div className="header__container">
                 <div className="header__description">
-                    <h1 className="header__description--title">Browse our Movies</h1>
+                    <h1 className="header__description--title">Browse our Shows</h1>
                     <div className="header__form">
                         <input
                             type="text"

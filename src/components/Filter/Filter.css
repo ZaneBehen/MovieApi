@@ -10,3 +10,9 @@
     width: 100%;
     max-width: 200px;
   }
+
+  @media (max-width: 550px) {
+    #filter {
+        margin-top: 20px;
+    }
+  }
