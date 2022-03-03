@@ -1,5 +1,6 @@
 #landing {
     background-color: rgba(115, 66, 214, 0.1);
+    min-height: 100vh;
     height: 100%;
 }
 
