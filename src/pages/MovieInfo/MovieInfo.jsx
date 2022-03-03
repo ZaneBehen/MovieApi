@@ -17,8 +17,9 @@ const MovieInfo = () => {
 
     useEffect(() => {
         async function fetchMovieDetails(userId) {
-            const requests = await axios.get(`https://api.themoviedb.org/3/movie/${userId || id}?api_key=a68a1e716dc10887f9e01a8f4e4ee2b3&language=en-US`);
-            const recommendedMoviesRequest = await axios.get(`https://api.themoviedb.org/3/movie/${userId || id}/recommendations?api_key=a68a1e716dc10887f9e01a8f4e4ee2b3&language=en-US&page=1`)
+            const TypeSearch = localStorage.getItem("search") || "movie";
+            const requests = await axios.get(`https://api.themoviedb.org/3/${TypeSearch}/${userId || id}?api_key=a68a1e716dc10887f9e01a8f4e4ee2b3&language=en-US`);
+            const recommendedMoviesRequest = await axios.get(`https://api.themoviedb.org/3/${TypeSearch}/${userId || id}/recommendations?api_key=a68a1e716dc10887f9e01a8f4e4ee2b3&language=en-US&page=1`)
             setMovieDetails(requests.data);
             setRecommededMovies(recommendedMoviesRequest.data.results)
             return requests;
@@ -37,7 +38,7 @@ const MovieInfo = () => {
                                     <FontAwesomeIcon icon="arrow-left" />
                                 </Link>
                                 <Link to="/search-movies" className="movie__link">
-                                    <h2 className="movieDetails--title--top">Movies</h2>
+                                    <h2 className="movieDetails--title--top">Shows</h2>
                                 </Link>
                             </div>
                             <SelectedMovieDetails movieDetails={movieDetails} base_url={base_url} />

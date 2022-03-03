@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Nav = () => {
     const isSearchPage = "/search-movies" === window.location.pathname;
+    
 
     function openMenu() {
         document.body.classList += " menu--open";
@@ -40,7 +41,7 @@ const Nav = () => {
                                 ${isSearchPage ? "link__hover-effect--black" : undefined}
                                 ${isSearchPage ? "text--black" : undefined}`}
                                 id={window.location.pathname === "/search-movies" ? 'active' : undefined}>
-                        Find a movie</Link>
+                        Find a Show</Link>
                 </li>
                 <li className="nav__link">
                     <Link to="/contact" className={`
@@ -65,7 +66,7 @@ const Nav = () => {
                         <Link to="/" className="menu__link">Home</Link>
                     </li>
                     <li className="menu__list">
-                        <Link to="/search-movies" className="menu__link">Movies</Link>
+                        <Link to="/search-movies" className="menu__link">Show</Link>
                     </li>
                     <li className="menu__list">
                         <Link to="/contact" className="menu__link">Contact</Link>

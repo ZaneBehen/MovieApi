@@ -10,6 +10,7 @@ const Search = () => {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false);
 
+
     function handleSearch() {
         searchValue === [] ? setSearchValue(null) : renderMovies(searchValue);
 
@@ -21,9 +22,11 @@ const Search = () => {
     }
 
     async function renderMovies(searchValue) {
-        const { data } = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=a68a1e716dc10887f9e01a8f4e4ee2b3&query=${searchValue || (searchInput ? searchInput : localStorage.getItem("displaySearch"))}`);
+        const TypeSearch = localStorage.getItem("search") || "movie";
+        
+        const { data } = await axios.get(`https://api.themoviedb.org/3/search/${TypeSearch}?api_key=a68a1e716dc10887f9e01a8f4e4ee2b3&query=${searchValue || (searchInput ? searchInput : localStorage.getItem("displaySearch"))}`);
 
-        setMovies(data.results);
+        setMovies(data.results); 
         setLoading(false)
         console.log(searchValue)
     }

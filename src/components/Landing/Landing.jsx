@@ -2,6 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HomeImg from '../../assets/undraw_horror_movie_3988.svg';
 import './landing.css';
 
+window.onload = function(){
+    localStorage.setItem("search", "movie")
+}
+
 const Landing = ({ onSearch, setSearchValue, searchValue, loading }) => {
     return (
         <section id="landing">
@@ -18,7 +22,8 @@ const Landing = ({ onSearch, setSearchValue, searchValue, loading }) => {
                                 value={searchValue || ''}
                                 onChange={(event) => setSearchValue(event.target.value)}
                                 onKeyPress={(event) => event.key === 'Enter' && onSearch()} />
-                            <div className="landing__search-btn" onClick={() => onSearch()}>
+                            <div className="landing__search-btn"
+                            onClick={() => onSearch()}>
                                 {
                                     !loading ? (
                                         <FontAwesomeIcon icon="search" />

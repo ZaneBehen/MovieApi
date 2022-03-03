@@ -1,11 +1,11 @@
 {
 	"folders": [
 		{
-			"name": "movie-react",
-			"path": "..\\..\\.."
+			"path": "."
+		},
+		{
+			"path": "..\\Code\\MoviesAPI"
 		}
 	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "MoviesAPI"
-	}
+	"settings": {}
 }

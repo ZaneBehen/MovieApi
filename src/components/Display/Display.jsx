@@ -1,7 +1,9 @@
+import React from 'react'
 import Movie from '../ui/Movie/Movie';
 import './display.css';
 import EmptyDisplay from '../../assets/undraw_searching.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Filter from '../Filter/Filter';
 
 
 const Display = ({ movies, loading }) => {
@@ -9,12 +11,13 @@ const Display = ({ movies, loading }) => {
     const displaySearch = localStorage.getItem("displaySearch");
 
     return (
-        <section id="display">
+        <section id="display" >
             <div className="display__container">
                 <div className="row">
                     <div className="display__heading-section">
                         <h1 className="display__search--header">Search results for <span className='text--purple'>"{homeSearch || displaySearch}"</span></h1>
                         <div className="display__price-filter--wrapper">
+                        <Filter id="filter" />
                         </div>
                     </div>
                     <div className="display-movies">
