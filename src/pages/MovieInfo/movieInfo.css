@@ -34,6 +34,10 @@
     font-size: 30px;
 }
 
+.arrow-left:hover {
+    color: blue;
+}
+
 .movieDetails--title--top {
     margin-left: 10px;
     margin-bottom: 0;
