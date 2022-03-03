@@ -49,10 +49,10 @@ nav {
 }
 
 .nav__link--anchor-secondary {
-    background-color: #FFF;
+    background-color: #032D3C;
     padding: 12px 40px;
     border-radius: 50px;
-    color: #032D3C;
+    color: #FFF;
     transition: all 300ms ease;
 }
 
